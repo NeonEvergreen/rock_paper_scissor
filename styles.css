@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font: normal normal normal 18px Arial, Helvetica, sans-serif;
+    /* border: 1px solid red; */
+}
+
+:root{
+    --header_1 : 32px;
+    --header_2 : 24px;
+    --button_color : #04AA6D;
+    --button_hover_color : hsl(158, 55%, 36%);
+}
+
+.header{
+    position: top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+}
+
+.header>h1{
+    font-size: var(--header_1);
+}
+
+.body-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 300px;
+}
+
+.body-content>h2{
+    font-size: var(--header_2);
+
+}
+
+.body-content>button{
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: var(--button_color);
+    padding: 6px 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.outcomes>*{
+    margin:30px 0px;
+    font-size:20px;
+}
+
+.button_hovered{
+    background-color: var(--button_hover_color) !important;
+}
