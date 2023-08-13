@@ -8,9 +8,10 @@ const player = document.getElementById("player");
 const computer = document.getElementById("computer");
 const result = document.getElementById("result");
 
-// Initialising inner Texts
+// Initialising inner Texts and winner
 player.innerText = null;
 computer.innerText = null;
+result.style.backgroundColor = "white";
 
 //Hover functionality for buttons
 function hover(element, enter_func, leave_func){
@@ -84,7 +85,8 @@ function declareWinner(winner_number){
    
     result.innerText = message;
    
-    winner_number == 1 ? result.style.backgroundColor = '#14d226' :  winner_number == 2 ? result.style.backgroundColor = '#FFCCCB' : null;   
+    winner_number == 1 ? result.style.backgroundColor = '#14d226' :  winner_number == 2 ? result.style.backgroundColor = '#FFCCCB' : result.style.backgroundColor = "yellow";
+    ;   
 
 }
 
