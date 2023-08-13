@@ -1,5 +1,9 @@
 "use strict";
 
+
+const tallier = {"computer" : 0, "human" : 0, "tie" : 0};
+
+
 document.addEventListener("DOMContentLoaded", ()=>{
 
 // element identifications
@@ -91,6 +95,21 @@ function declareWinner(winner_number){
 
 }
 
+
+function keepWinTally(winnerNumber){
+    if(winnerNumber == 0){
+        tallier["tie"] += 1; 
+    }
+    if(winnerNumber == 1){
+        tallier["human"] += 1; 
+    }
+    if(winnerNumber == 2){
+        tallier["computer"] += 1; 
+    }
+
+    console.log(tallier);
+}
+
 //// Initialise match
 function play_match(button_choice){
 
@@ -99,7 +118,7 @@ function play_match(button_choice){
         return;
     }
 
- let computer_choice = play_rps();
+let computer_choice = play_rps();
 
 let player_choice;
 
@@ -113,9 +132,13 @@ if(button_choice.classList.contains("scissor"))  { player_choice = "scissor";}
 
  let winner = identify_winner(player_choice, computer_choice);
 
+ //Console data
+ keepWinTally(winner);
+
+ //Message content
  declareWinner(winner);
 }
 
 //// Event listener for click
 button.forEach((button_choice) => button_choice.addEventListener('click', () => play_match(button_choice)));
-})
+});

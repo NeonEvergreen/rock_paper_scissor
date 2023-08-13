@@ -11,6 +11,7 @@
     --header_2 : 24px;
     --button_color : #04AA6D;
     --button_hover_color : hsl(158, 55%, 36%);
+    --min-width-content: 500px;
 }
 
 .header{
@@ -32,7 +33,8 @@
     align-items: center;
     justify-content: space-around;
     height: 300px;
-    min-width: 500px;
+    min-width: var(--min-width-content);
+    min-height: 500px;
 }
 
 .body-content>h2{
@@ -75,4 +77,20 @@ width: 300px;
     justify-content: space-between;
     align-items: center;
     height: 100px;
+}
+
+footer{
+    display: flex;
+    position: fixed;
+    bottom: 0%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 25px;
+    background-color: white;
+    border: 1px solid rgb(214, 214, 222);
+}
+
+footer>p{
+    min-width: var(--min-width-content);
 }
