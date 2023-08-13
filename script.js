@@ -1,5 +1,6 @@
 "use strict";
 
+document.addEventListener("DOMContentLoaded", ()=>{
 
 // element identifications
 
@@ -117,3 +118,4 @@ if(button_choice.classList.contains("scissor"))  { player_choice = "scissor";}
 
 //// Event listener for click
 button.forEach((button_choice) => button_choice.addEventListener('click', () => play_match(button_choice)));
+})
